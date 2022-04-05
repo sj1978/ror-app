@@ -1,0 +1,32 @@
+<div id="<%= dom_id friend %>">
+
+<table class="table ">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col"><strong>#:</strong></th>
+      <th scope="col"><strong>First name:</strong></th>
+      <th scope="col"><strong>Last name:</strong></th>
+      <th scope="col"> <strong>Email:</strong></th>
+      <th scope="col"> <strong>Phone:</strong></th>
+      <th scope="col"> <strong>Tweeter:</strong></th>
+    </tr>
+  </thead>
+  <tbody class="table-danger">
+    <tr>
+      <th scope="row"><%= friend.id %></th>
+ 
+      <td><%= friend.first_name %></td>
+      <td><%= friend.last_name %></td>
+
+      <td><%= friend.email %></td>
+      <td><%= friend.phone %></td>
+      <td><%= friend.tweeter %></td>
+    
+      
+    </tr>
+
+  </tbody>
+</table>
+ 
+
+</div>
