@@ -15,6 +15,10 @@
   <%= render "home/header"%>
  <div class="container">
     <%= yield %>
+     <% if user_signed_in? %>
+     
+        <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn btn-default btn-sm" %>
+      <%end%>
 </div>
   </body>
 </html>
