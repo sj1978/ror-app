@@ -1,17 +1,19 @@
+
+<%if user_signed_in?%>
+
 <p style="color: green"><%= notice %></p>
-
-<h1>All my Friends</h1>
-
 <div id="friends">
   <% @friends.each do |friend| %>
   <table class="table">
+  <h1><%=friend.user.email%>'s friend list</h1>
     <%= render friend %>
-   
-    <p>
-      <%= link_to "Show this friend", friend %>
-    </p>
+  
   <% end %>
 </div>
-
-
 <%= link_to "New friend", new_friend_path %>
+<%else%>
+<%= render "home/home"%>
+<%end%>
+
+
+
